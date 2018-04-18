@@ -18,7 +18,7 @@ public class Customer {
         next = null;
     }
 
-    public Customer(int items, int cost){
+    public Customer(int items, double cost){
         totalCustomers = totalCustomers + 1;
         totalCost = totalCost + cost;
         totalItems = totalItems + items;
@@ -58,6 +58,18 @@ public class Customer {
 
     public void setNext(Customer next) {
         this.next = next;
+    }
+
+    public static int getTotalCustomers(){
+        return totalCustomers;
+    }
+
+    public static int getTotalItems(){
+        return totalItems;
+    }
+
+    public static double getTotalCost(){
+        return totalCost;
     }
 
     public boolean equals(Customer b)
