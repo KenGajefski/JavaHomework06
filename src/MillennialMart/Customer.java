@@ -80,8 +80,10 @@ public class Customer {
             return false;
     }
 
-    public String toString()
+    public void customerToString()
     {
-        return "ID: " + ID + "\nNumber of items: " + items + "\nCost: " + cost;
+        System.out.printf("%8s" + "%8s" + "%11s" + "\n", "ID", "Items", "Cost ($)");
+        System.out.printf("%8d" + "%8d" + "%11.2f" + "\n", ID, items, cost);
+
     }
 }
